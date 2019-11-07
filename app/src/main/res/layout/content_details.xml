@@ -8,15 +8,6 @@
     tools:context=".Activities.DetailsActivity"
     tools:showIn="@layout/activity_details">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/details_title"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/home_margin_normal"
-        android:text="Details"
-        android:textSize="@dimen/home_text_header"
-        />
 
     <com.yarolegovich.discretescrollview.DiscreteScrollView
         android:layout_width="match_parent"
@@ -27,15 +18,14 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/details_Rv"
         android:clipToPadding="false"
-        android:scrollbars="horizontal"
-        android:layout_below="@id/details_title"/>
+        android:scrollbars="horizontal" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="275dp"
         android:layout_marginTop="@dimen/home_margin_normal"
-        android:layout_marginStart="@dimen/home_margin_intersect"
-        android:layout_marginEnd="@dimen/home_margin_intersect"
+        android:layout_marginStart="@dimen/home_margin_normal"
+        android:layout_marginEnd="@dimen/home_margin_normal"
         android:padding="20dp"
         android:layout_below="@id/details_Rv"
         android:id="@+id/details_description_container"
@@ -45,6 +35,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/home_margin_intersect"
             android:id="@+id/details_description_title"
             android:text="Hotel Name"
             android:textSize="@dimen/main_text_header"
@@ -54,13 +45,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/details_description_title"
+            android:layout_marginTop="@dimen/home_margin_intersect"
             android:id="@+id/details_description"
             android:text="@string/lorem"
             android:ellipsize="marquee"
             android:maxLines="5"
             android:minLines="1"
             android:scrollbars="vertical"/>
-        
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ripple_action"
+            android:text="More Info"
+            android:textColor="@color/white"/>
+
     </RelativeLayout>
 
 </RelativeLayout>

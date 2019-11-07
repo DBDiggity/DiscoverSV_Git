@@ -74,6 +74,7 @@ public class MainFragment extends Fragment {
     public List<PictureCard> destinationCards, experienceCards, thingsToDoCards, hotelCards, restaurantCards;
 
     public Context context;
+    private String detailsType = "null";
 
     SimpleExoPlayer player;
     RequestOptions options;
@@ -141,20 +142,19 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.hotel_all:
-                        popUpMenu();
-                        Intent intent = new Intent(getActivity(), DetailsActivity.class);
-                        intent.putExtra("detailType", "hotels");
-                        startActivity(intent);
+                       detailsType = "hotels";
                         break;
-
                     case R.id.restaurant_all :
-                        popUpMenu();
+                        detailsType = "restaurants";
                         break;
-
                     case R.id.destinations_all:
                         popUpMenu();
                         break;
                 }
+
+                Intent intent = new Intent(getActivity(), DetailsActivity.class);
+                intent.putExtra("detailType", detailsType);
+                startActivity(intent);
             }
         };
 

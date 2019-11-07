@@ -92,7 +92,7 @@ public class Restaurant {
                     "1-784-458-4308",
                     "Ratho Mill",
                     "The Loft Restaurant and Bar, located at the Blue Lagoon Hotel & Marina",
-                    new int[]{0},
+                    new int[]{R.drawable.loft_1, R.drawable.loft_3, R.drawable.loft_2, R.drawable.loft_4},
                     new int[]{0},
                     new LatLng(13.127832, -61.190621)
                     ));
@@ -103,7 +103,8 @@ public class Restaurant {
                     "1-784-456-8999",
                     "Ratho Mill",
                     "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
-                    new int[]{0},
+                    new int[]{R.drawable.driftwood_1, R.drawable.driftwood_2, R.drawable.driftwood_3, R.drawable.driftwood_4,
+                    R.drawable.driftwood_5},
                     new int[]{0},
                     new LatLng(13.128690, -61.192901)
             ));
@@ -117,8 +118,8 @@ public class Restaurant {
                             " Surrounded by tropical flowers with the alluring scent of jasmine filling the air, " +
                             "day into night, our restaurant is the ideal setting to savor the distinctive flavors of the Caribbean. Reservations are required\",\n"
                     ,
-                    new int[]{0},
-                    new int[]{0},
+                    new int[]{R.drawable.yi_1, R.drawable.yi_2, R.drawable.yi_3},
+                    new int[]{R.drawable.yi_breakfast, R.drawable.yi_lunch, R.drawable.yi_dinner},
                     new LatLng(13.131297, -61.202049)
             ));
 
@@ -130,8 +131,8 @@ public class Restaurant {
                     "Ascend a flight of stairs from bustling Kingstown and you will arrive at Flow Wine Bar & Kitchen. " +
                             "Conceived as an exciting urban destination it is a new approach to the good life, specialising in wine with a kitchen to appeal to any appetite." +
                             " The aim is simple; Flow provides a completely elegant, sensual, yet casual experience.",
-                    new int[]{0},
-                    new int[]{0},
+                    new int[]{R.drawable.flow_1, R.drawable.flow_2},
+                    new int[]{R.drawable.flow_menu, R.drawable.flow_menu_2, R.drawable.flow_menu_3},
                     new LatLng(13.152311, -61.223114)
             ));
 
@@ -142,7 +143,7 @@ public class Restaurant {
                     "Villa",
                     "Beachcombers hotel’s open air restaurant & bar “The Deck” allows anyone to enjoy the Caribbean breeze and young island cut while dining on an exquisite cuisine. " +
                             "The restaurant has an amazing selection of international & local favorites cooked with the ingredients that our beautiful country has to provide!",
-                    new int[]{0},
+                    new int[]{R.drawable.bc_1, R.drawable.bc_2, R.drawable.bc_3},
                     new int[]{0},
                     new LatLng(13.135076, -61.202214)
             ));
@@ -153,8 +154,8 @@ public class Restaurant {
                     "1-784-434-6868",
                     "Fountain",
                     "Cocktail bar & lounge, located on the Vigie Highway",
-                    new int[]{0},
-                    new int[]{0},
+                    new int[]{R.drawable.prestige_1, R.drawable.prestige_2},
+                    new int[]{R.drawable.prestige_menu_1, R.drawable.prestige_menu_2},
                     new LatLng(13.150977, -61.198668)
             ));
 
@@ -164,7 +165,8 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Fountain",
                     "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
-                    new int[]{0},
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
                     new int[]{0},
                     new LatLng(13.149429, -61.202250)
             ));

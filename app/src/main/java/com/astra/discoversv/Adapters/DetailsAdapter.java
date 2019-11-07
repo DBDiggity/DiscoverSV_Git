@@ -69,7 +69,7 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.MyViewHo
         } else if (detailType.equals("restaurants")) {
             Restaurant restaurant = restaurants.get(position);
             holder.title.setText(restaurant.getName());
-            Glide.with(context).load(restaurant.getPictures()[position]).into(holder.background);
+            Glide.with(context).load(restaurant.getPictures()[0]).into(holder.background);
         }
     }
 
