@@ -12,15 +12,23 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/details_gradient">
+
 
         <ImageView
             android:id="@+id/card_details_background"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/album_cover_height"
+            android:layout_height="@dimen/detail_image_height"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:scaleType="fitXY" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_image_height"
+            android:background="@drawable/details_gradient"/>
 
         <TextView
             android:id="@+id/card_details_title"
@@ -34,8 +42,13 @@
             android:paddingBottom="@dimen/album_title_padding"
             android:background="@android:color/transparent"
             android:text="Detail Name"
-            android:textColor="@color/album_title"
-            android:textSize="17sp" />
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"/>
 
 
     </RelativeLayout>

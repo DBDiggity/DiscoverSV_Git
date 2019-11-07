@@ -21,12 +21,14 @@
 
     <dimen name="home_margin_normal">30dp</dimen>
     <dimen name="home_margin_intersect">10dp</dimen>
-    <dimen name="home_text_header">18dp</dimen>
+    <dimen name="home_text_header">18sp</dimen>
     <dimen name="home_icon_size">50dp</dimen>
     <dimen name="small_icon_size">25dp</dimen>
     <dimen name="horizontal_line_size">0dp</dimen>
     <dimen name="app_bar_height">200dp</dimen>
     <dimen name="item_width">200dp</dimen>
     <dimen name="text_margin">16dp</dimen>
+    <dimen name="detail_image_height">225dp</dimen>
+    <dimen name="main_text_header">22sp</dimen>
 
 </resources>

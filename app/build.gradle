@@ -56,7 +56,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation "com.leinardi.android:speed-dial:3.0.0"
     implementation 'com.orhanobut:dialogplus:1.11@aar'
-    implementation 'com.cleveroad:fan-layout-manager:1.0.5'
+    implementation 'com.yarolegovich:discrete-scrollview:1.4.9'
 
 
 }
