@@ -52,7 +52,6 @@ public class DetailsActivity extends AppCompatActivity {
     @BindView(R.id.details_btn_menu) Button menuBtn;
 
     List<PictureCard> picCards = new ArrayList<>();
-
     InfiniteScrollAdapter wrapper;
     DialogPlus dialog;
 
@@ -140,6 +139,9 @@ public class DetailsActivity extends AppCompatActivity {
                         descriptionTitle.setText(restaurant.getName());
                         checkMenu(restaurant.getMenu());
                         menuPosition = wrapper.getRealCurrentPosition();
+
+                    case "sites":
+                        break;
                 }
 
 
