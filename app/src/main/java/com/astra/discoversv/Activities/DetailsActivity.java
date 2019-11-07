@@ -16,11 +16,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.text.method.ScrollingMovementMethod;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.astra.discoversv.R;
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.ViewHolder;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
 import com.yarolegovich.discretescrollview.transform.Pivot;
@@ -40,9 +44,13 @@ public class DetailsActivity extends AppCompatActivity {
     @BindView(R.id.details_description) TextView descriptionText;
     @BindView(R.id.details_description_title) TextView descriptionTitle;
 
+    @BindView(R.id.details_btn_info) Button infoBtn;
+    @BindView(R.id.details_btn_menu) Button menuBtn;
+
     List<PictureCard> picCards = new ArrayList<>();
 
     InfiniteScrollAdapter wrapper;
+    DialogPlus dialog;
 
     private String detailType;
     private List<Hotel> hotels;
@@ -77,6 +85,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         initDetailsInfo();
         initRecycler();
+        initListeners();
 
 
         descriptionText.setMovementMethod(new ScrollingMovementMethod());
@@ -88,6 +97,7 @@ public class DetailsActivity extends AppCompatActivity {
             case "hotels":
                 hotels = new Hotel().initHotels();
                 getSupportActionBar().setTitle("Hotels");
+                menuBtn.setVisibility(View.GONE);
                 break;
             case "restaurants":
                 restaurants = new Restaurant().initRestaurants();
@@ -123,6 +133,7 @@ public class DetailsActivity extends AppCompatActivity {
                         Restaurant restaurant = restaurants.get(wrapper.getRealCurrentPosition());
                         descriptionText.setText(restaurant.getDescription());
                         descriptionTitle.setText(restaurant.getName());
+                        checkMenu(restaurant.getMenu());
                 }
 
 
@@ -132,11 +143,36 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private void checkMenu(int[] menuList){
-        if (menuList.length != 0){
+        if (menuList.length == 0)
+            menuBtn.setVisibility(View.INVISIBLE);
+        else
+            menuBtn.setVisibility(View.VISIBLE);
 
-        }
     }
 
+    private void initListeners(){
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()){
+                    case R.id.details_btn_menu:
+                        buildDialog();
+
+                }
+            }
+        };
+
+        menuBtn.setOnClickListener(listener);
+    }
+
+    private void buildDialog(){
+        dialog = DialogPlus.newDialog(this)
+                .setContentHolder(new ViewHolder(R.layout.layout_menu))
+                .setExpanded(true)
+                .setGravity(Gravity.CENTER)
+                .create();
+        dialog.show();
+    }
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

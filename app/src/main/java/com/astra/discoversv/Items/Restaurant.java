@@ -93,7 +93,7 @@ public class Restaurant {
                     "Ratho Mill",
                     "The Loft Restaurant and Bar, located at the Blue Lagoon Hotel & Marina",
                     new int[]{R.drawable.loft_1, R.drawable.loft_3, R.drawable.loft_2, R.drawable.loft_4},
-                    new int[]{0},
+                    new int[]{},
                     new LatLng(13.127832, -61.190621)
                     ));
 
@@ -105,7 +105,7 @@ public class Restaurant {
                     "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
                     new int[]{R.drawable.driftwood_1, R.drawable.driftwood_2, R.drawable.driftwood_3, R.drawable.driftwood_4,
                     R.drawable.driftwood_5},
-                    new int[]{0},
+                    new int[]{},
                     new LatLng(13.128690, -61.192901)
             ));
 
@@ -144,7 +144,7 @@ public class Restaurant {
                     "Beachcombers hotel’s open air restaurant & bar “The Deck” allows anyone to enjoy the Caribbean breeze and young island cut while dining on an exquisite cuisine. " +
                             "The restaurant has an amazing selection of international & local favorites cooked with the ingredients that our beautiful country has to provide!",
                     new int[]{R.drawable.bc_1, R.drawable.bc_2, R.drawable.bc_3},
-                    new int[]{0},
+                    new int[]{},
                     new LatLng(13.135076, -61.202214)
             ));
 
@@ -167,7 +167,7 @@ public class Restaurant {
                     "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
                     new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
                     R.drawable.signature_3},
-                    new int[]{0},
+                    new int[]{},
                     new LatLng(13.149429, -61.202250)
             ));
 
