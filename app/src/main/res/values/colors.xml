@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5C9AFF</color>
+    <color name="colorPrimaryDark">#2E61B3</color>
+    <color name="colorPrimaryLight">#75AAFF</color>
+    <color name="colorAccent">#B3811D</color>
+    <color name="colorAccentLight">#FFC95C</color>
+
+    <color name="whiteSmoke">#DCDCDC</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="background_variant_1">#989BA7</color>
+    <color name="album_title">#4c4c4c</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="overlay_black">#4B000000</color>
+    <color name="faded_gray">#A3989BA7</color>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Discover SVG</string>
+    <string name="backdrop_title">Discover SVG</string>
+    <string name="backdrop_subtitle">The Caribbean you\'re looking for</string>
+    <string name="young_island_description">"Lovely and even seductive, enjoy authentic beachfront dining in open-air, thatched roof huts.
+         Surrounded by tropical flowers with the alluring scent of jasmine filling the air, day into night, our restaurant is the ideal setting to
+        savor the distinctive flavors of the Caribbean. Reservations are required",
+</string>
+
+    <string name="google_maps_api_key">AIzaSyC7iKhljTLuhT_1eGYKu4rqcZSJ6chijms</string>
+    <string name="title_detail_list">Details</string>
+    <string name="title_detail_detail">Detail Detail</string>
+    <string name="title_activity_details">DetailsActivity</string>
+</resources>

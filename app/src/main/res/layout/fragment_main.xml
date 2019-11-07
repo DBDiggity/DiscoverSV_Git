@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_background_home">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_home_quicklook"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginLeft="@dimen/home_margin_normal"
+                android:layout_marginRight="@dimen/home_margin_normal"
+                android:layout_marginTop="@dimen/home_margin_normal"
+                android:elevation="3dp"
+                card_view:cardCornerRadius="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recycler_view"
+                    android:clipToPadding="false"
+                    android:scrollbars="horizontal"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_size"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_normal"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gradient_background_home">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:layout_marginTop="@dimen/home_margin_normal"
+                android:id="@+id/video_container">
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/exo_player"
+                    android:layout_marginTop="@dimen/home_margin_intersect"
+                    android:layout_marginBottom="@dimen/home_margin_intersect"
+                    android:layout_marginStart="@dimen/home_margin_intersect"
+                    android:layout_marginEnd="@dimen/home_margin_intersect"/>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="Explore Videos"
+                    style="@style/AppTheme.RoundedCornerMaterialButton"
+                    android:background="@drawable/ripple_action"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_size"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_normal"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_background_home">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/home_margin_normal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/sun_umbrella_color"
+                    android:id="@+id/destination_umbrella"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/home_margin_intersect"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Destinations"
+                    android:layout_toEndOf="@id/destination_umbrella"
+                    android:id="@+id/destination_title"
+                    android:textSize="@dimen/home_text_header"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/destinations_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/home_margin_normal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    style="@style/AppTheme.RoundedCornerMaterialButtonInverted"
+                    android:background="@drawable/ripple_inverted"
+                    android:text="View All"
+                    android:textSize="@dimen/songs_count"
+
+                    />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_destination"
+                android:clipToPadding="false"
+                android:layout_marginTop="@dimen/home_margin_intersect"
+                android:layout_marginStart="@dimen/home_margin_intersect"
+                android:layout_marginEnd="@dimen/home_margin_intersect"
+                android:scrollbars="horizontal"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_size"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_normal"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_background_home">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_experience_icon"
+                android:layout_width="@dimen/home_icon_size"
+                android:layout_height="@dimen/home_icon_size"
+                android:layout_marginTop="@dimen/home_margin_normal"
+                android:layout_gravity="center"
+                android:src="@drawable/sun_umbrella_color"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Experience SVG"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/home_margin_intersect"
+                android:layout_marginStart="@dimen/home_margin_intersect"
+                android:layout_marginEnd="@dimen/home_margin_intersect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_experience"
+                android:clipToPadding="false"
+                android:scrollbars="horizontal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_size"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_normal"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_background_home">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_thingsToDo_icon"
+                android:layout_width="@dimen/home_icon_size"
+                android:layout_height="@dimen/home_icon_size"
+                android:layout_marginTop="@dimen/home_margin_normal"
+                android:layout_gravity="center"
+                android:src="@drawable/hotel_dark"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Things To Do"
+                android:textStyle="bold"
+                android:textSize="18dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/home_margin_intersect"
+                android:layout_marginStart="@dimen/home_margin_intersect"
+                android:layout_marginEnd="@dimen/home_margin_intersect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_thingsToDo"
+                android:clipToPadding="false"
+                android:scrollbars="horizontal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_size"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_normal"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_background_home">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="@dimen/home_margin_normal"
+                android:layout_marginStart="@dimen/home_margin_intersect"
+                android:layout_marginEnd="@dimen/home_margin_intersect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/planTrip_card"
+                android:elevation="5dp"
+                app:cardCornerRadius="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/planTrip_titleBar">
+
+                        <ImageView
+                            android:id="@+id/planTrip_icon"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/sun_umbrella_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/planTrip_title"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/planTrip_icon"
+                            android:layout_marginStart="15dp"
+                            android:textSize="@dimen/home_text_header"
+                            android:text="Plan Your Trip"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/planTrip_titleBar"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/white"
+                        android:padding="10dp">
+
+                        <EditText
+                            android:id="@+id/planTrip_tripName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Name of Your Trip"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"/>
+
+                        <Button
+                            android:id="@+id/planTrip_destination"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/planTrip_tripName"
+                            android:text="Add Destination"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/planTrip_destination"
+                            android:text="Create Trip"
+                            android:layout_centerHorizontal="true"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_size"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_normal"/>
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_background_home">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/home_margin_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/sun_umbrella_color"
+                    android:id="@+id/hotel_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/home_margin_intersect"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hotels"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/hotel_icon"
+                    android:textSize="@dimen/home_text_header"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/hotel_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/home_margin_normal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    style="@style/AppTheme.RoundedCornerMaterialButtonInverted"
+                    android:background="@drawable/ripple_inverted"
+                    android:text="View All"
+                    android:textSize="@dimen/songs_count"/>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/home_margin_intersect"
+                android:layout_marginStart="@dimen/home_margin_intersect"
+                android:layout_marginEnd="@dimen/home_margin_intersect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_hotels"
+                android:clipToPadding="false"
+                android:scrollbars="horizontal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_size"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_normal"/>
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/gradient_background_home">
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/home_margin_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/sun_umbrella_color"
+                    android:id="@+id/restaurant_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/home_margin_intersect"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hungry?"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/restaurant_icon"
+                    android:textSize="@dimen/home_text_header"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/restaurant_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/home_margin_normal"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    style="@style/AppTheme.RoundedCornerMaterialButtonInverted"
+                    android:background="@drawable/ripple_inverted"
+                    android:text="View All"
+                    android:textSize="@dimen/songs_count"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/home_margin_intersect"
+                android:layout_marginStart="@dimen/home_margin_intersect"
+                android:layout_marginEnd="@dimen/home_margin_intersect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_restaurants"
+                android:clipToPadding="false"
+                android:scrollbars="horizontal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/horizontal_line_size"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_normal"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

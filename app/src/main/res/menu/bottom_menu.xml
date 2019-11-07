@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/action_accomodation"
+            android:enabled="true"
+            android:icon="@drawable/hotel_dark"
+            
+            android:title="Accomodation"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/action_transport"
+            android:enabled="true"
+            android:title="Getting Around"
+            android:icon="@drawable/ic_directions_bus_black_24dp"
+            app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_contact"
+        android:enabled="true"
+        android:icon="@drawable/ic_phone_book"
+        android:title="Contacts"
+        app:showAsAction="ifRoom"/>
+
+</menu>
