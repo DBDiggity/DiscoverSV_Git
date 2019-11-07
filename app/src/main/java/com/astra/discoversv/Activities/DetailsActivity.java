@@ -1,8 +1,11 @@
 package com.astra.discoversv.Activities;
 
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.astra.discoversv.Adapters.DetailsAdapter;
+import com.astra.discoversv.Adapters.MenuAdapter;
 import com.astra.discoversv.Items.Hotel;
 import com.astra.discoversv.Items.PictureCard;
 import com.astra.discoversv.Items.Restaurant;
@@ -18,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -56,6 +60,7 @@ public class DetailsActivity extends AppCompatActivity {
     private List<Hotel> hotels;
     private List<Restaurant> restaurants;
 //    private List<Sites> sites;
+    private int menuPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,6 +139,7 @@ public class DetailsActivity extends AppCompatActivity {
                         descriptionText.setText(restaurant.getDescription());
                         descriptionTitle.setText(restaurant.getName());
                         checkMenu(restaurant.getMenu());
+                        menuPosition = wrapper.getRealCurrentPosition();
                 }
 
 
@@ -166,12 +172,30 @@ public class DetailsActivity extends AppCompatActivity {
     }
 
     private void buildDialog(){
+
+
         dialog = DialogPlus.newDialog(this)
                 .setContentHolder(new ViewHolder(R.layout.layout_menu))
-                .setExpanded(true)
+                .setMargin(0, 10, 0, 0)
+                .setPadding(0,0,0,0)
+                .setContentWidth(ViewGroup.LayoutParams.MATCH_PARENT)
+                .setContentHeight(ViewGroup.LayoutParams.MATCH_PARENT)
+                .setExpanded(true, 1500)
                 .setGravity(Gravity.CENTER)
+                .setContentBackgroundResource(R.color.overlay_black)
                 .create();
         dialog.show();
+
+        DiscreteScrollView scrollView = (DiscreteScrollView) dialog.getHolderView().findViewById(R.id.menu_scrollView);
+        RecyclerView.Adapter adapter = new MenuAdapter(restaurants.get(menuPosition).getMenu(), this);
+        scrollView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+        scrollView.setItemTransformer(new ScaleTransformer.Builder()
+                .setMaxScale(1.05f)
+                .setMinScale(0.8f)
+                .setPivotX(Pivot.X.CENTER) // CENTER is a default one
+                .setPivotY(Pivot.Y.BOTTOM) // CENTER is a default one
+                .build());
     }
     @Override
     public boolean onSupportNavigateUp() {

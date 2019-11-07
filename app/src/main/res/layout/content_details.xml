@@ -26,6 +26,7 @@
         android:layout_marginTop="@dimen/home_margin_normal"
         android:layout_marginStart="@dimen/home_margin_normal"
         android:layout_marginEnd="@dimen/home_margin_normal"
+        android:layout_marginBottom="@dimen/home_margin_normal"
         android:padding="20dp"
         android:layout_below="@id/details_Rv"
         android:id="@+id/details_description_container"
