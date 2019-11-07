@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.astra.discoversv.Items.Hotel;
 import com.astra.discoversv.Items.Restaurant;
+import com.astra.discoversv.Items.Site;
 import com.astra.discoversv.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -86,12 +87,12 @@ public class MapFragment extends Fragment {
 
                 CameraPosition googlePlex = CameraPosition.builder()
                         .target(new LatLng(13.148104,-61.223862))
-                        .zoom(17)
+                        .zoom(15)
                         .bearing(0)
                         .tilt(45)
                         .build();
 
-                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 5000, null);
+                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 10000, null);
 
                 mMap.clear();
                 addMarker2Map(mMap);
@@ -152,7 +153,8 @@ public class MapFragment extends Fragment {
                         break;
 
                     case "Toggle Sites":
-
+                        toggleMarkers(sitesList, siteToggle, 2, actionItem, siteAction);
+                        siteToggle = !siteToggle;
                         break;
                 }
 
@@ -195,6 +197,7 @@ public class MapFragment extends Fragment {
 
         List<Restaurant> restaurants = new Restaurant().initRestaurants();
         List<Hotel> hotels = new Hotel().initHotels();
+        List<Site> sites = new Site().initSites();
 
         for (Restaurant restaurant : restaurants){
             restaurantList.add(mMap.addMarker(new MarkerOptions().
@@ -210,6 +213,46 @@ public class MapFragment extends Fragment {
                   title(hotel.getName()).
                   snippet(hotel.getDescription()).
                   icon(BitmapDescriptorFactory.fromResource(R.drawable.hotel_marker))));
+      }
+
+
+      for (Site site : sites){
+          BitmapDescriptor markerIcon;
+
+          switch (site.getEntertainmentType()){
+              case 1:
+                  markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.hike_marker);
+                  break;
+              case 2:
+                  markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.beach_marker);
+                  break;
+               case 3:
+                  markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.explore_marker);
+                  break;
+              case 4:
+                  markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.fort_marker);
+                  break;
+              case 5:
+                  markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.fun_marker);
+                  break;
+              case 6:
+                  markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.falls_marker);
+                  break;
+              case 7:
+                  markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.beach_marker);
+                  break;
+                  default:
+                      markerIcon = BitmapDescriptorFactory.fromResource(R.drawable.site_marker);
+
+          }
+
+          sitesList.add(mMap.addMarker(new MarkerOptions().
+                  position(site.getCoords()).
+                  title(site.getName()).
+                  snippet(site.getDescription()).
+                  icon(markerIcon)));
+
+
       }
 
     }
