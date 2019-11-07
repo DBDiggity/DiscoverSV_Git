@@ -119,7 +119,8 @@ public class Restaurant {
                             "day into night, our restaurant is the ideal setting to savor the distinctive flavors of the Caribbean. Reservations are required\",\n"
                     ,
                     new int[]{R.drawable.yi_1, R.drawable.yi_2, R.drawable.yi_3},
-                    new int[]{R.drawable.yi_breakfast, R.drawable.yi_lunch, R.drawable.yi_dinner},
+//                    new int[]{R.drawable.yi_breakfast, R.drawable.yi_lunch, R.drawable.yi_dinner},
+                    new int[]{},
                     new LatLng(13.131297, -61.202049)
             ));
 
@@ -170,6 +171,181 @@ public class Restaurant {
                     new int[]{},
                     new LatLng(13.149429, -61.202250)
             ));
+//TODO: Add phone numbers, description and pictures for restaurants after here
+            //French Veranda
+            restaurants.add(new Restaurant(
+                    "French Veranda",
+                    "1-784-456-6518",
+                    "Villa",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(13.132045, -61.199620)
+            ));
+
+            //Jack's Beach Bar
+            restaurants.add(new Restaurant(
+                    "Jack's Beach Bar",
+                    "1-784-456-6518",
+                    "Bequia",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(13.002870, -61.240198)
+            ));
+
+            //The Fig Tree
+            restaurants.add(new Restaurant(
+                    "The Fig Tree",
+                    "1-784-456-6518",
+                    "Bequia",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(13.149429, -61.202250)
+            ));
+
+            //The Fig Tree
+            restaurants.add(new Restaurant(
+                    "The Fig Tree",
+                    "1-784-456-6518",
+                    "Bequia",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(13.006549, -61.238068)
+            ));
+
+            //Cisco's Place
+            restaurants.add(new Restaurant(
+                    "Cisco's Place",
+                    "1-784-456-6518",
+                    "Bequia",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(13.012260, -61.238840)
+            ));
+
+            //Basil's  Bar (Mustique)
+            restaurants.add(new Restaurant(
+                    "Basil's  Bar",
+                    "1-784-456-6518",
+                    "Mustique",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(12.880694, -61.188236)
+            ));
+
+            //The View
+            restaurants.add(new Restaurant(
+                    "The View",
+                    "1-784-456-6518",
+                    "Mustique",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(12.882777, -61.188440)
+            ));
+
+
+            //Cotton House Beach Bar
+            restaurants.add(new Restaurant(
+                    "Cotton House Beach Bar",
+                    "1-784-456-6518",
+                    "Mustique",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(12.889526, -61.185256)
+            ));
+
+
+            //Firefly Hotel
+            restaurants.add(new Restaurant(
+                    "Firefly Hotel",
+                    "1-784-456-6518",
+                    "Mustique",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(12.878415, -61.185733)
+            ));
+
+
+            //Royal Palm Restaurant
+            restaurants.add(new Restaurant(
+                    "Royal Palm Restaurant",
+                    "1-784-456-6518",
+                    "Palm Island",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(12.587878, -61.400701)
+            ));
+
+
+            //Chill Spot
+            restaurants.add(new Restaurant(
+                    "Chill Spot",
+                    "1-784-456-6518",
+                    "Arnos Vale",
+                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+                    R.drawable.signature_3},
+                    new int[]{},
+                    new LatLng(13.145012, -61.205945)
+            ));
+
+
+//            //The View
+//            restaurants.add(new Restaurant(
+//                    "The View",
+//                    "1-784-456-6518",
+//                    "Mustique",
+//                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+//                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+//                    R.drawable.signature_3},
+//                    new int[]{},
+//                    new LatLng(12.882777, -61.188440)
+//            ));
+//
+//
+//            //The View
+//            restaurants.add(new Restaurant(
+//                    "The View",
+//                    "1-784-456-6518",
+//                    "Mustique",
+//                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+//                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+//                    R.drawable.signature_3},
+//                    new int[]{},
+//                    new LatLng(12.882777, -61.188440)
+//            ));
+//
+//
+//            //The View
+//            restaurants.add(new Restaurant(
+//                    "The View",
+//                    "1-784-456-6518",
+//                    "Mustique",
+//                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
+//                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
+//                    R.drawable.signature_3},
+//                    new int[]{},
+//                    new LatLng(12.882777, -61.188440)
+//            ));
 
 
         return restaurants;

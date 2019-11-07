@@ -173,6 +173,87 @@ public class Hotel {
                 new String[]{""},
                 new LatLng(13.134237, -61.201582)));
 
+
+        //Spring Garden Resort
+        hotels.add(new Hotel("Spring Garden Resort","1-784-457-4795",
+                "Spring", "",
+                new int[]{R.drawable.paradise_inn},
+                new int[]{110, 120, 73, 88, 90, 105, 93, 108 },
+                new String[]{"Ocean Front Apartments (Single)", "Ocean Front Apartments (Double)", "Garden View (Single)", "Garden View (Double)",
+                        "Superior Garden View (Single)", "Superior Garden View (Double)", "Garden View Apartments (Single)", "Garden View Apartments (Double)"},
+                new String[]{""},
+                new LatLng(13.185358, -61.142816)));
+
+
+        //Paradise Inn
+        hotels.add(new Hotel("Paradise Inn","1-784-457-4795",
+                "Villa Beach", "",
+                new int[]{R.drawable.paradise_inn},
+                new int[]{110, 120, 73, 88, 90, 105, 93, 108 },
+                new String[]{"Ocean Front Apartments (Single)", "Ocean Front Apartments (Double)", "Garden View (Single)", "Garden View (Double)",
+                        "Superior Garden View (Single)", "Superior Garden View (Double)", "Garden View Apartments (Single)", "Garden View Apartments (Double)"},
+                new String[]{""},
+                new LatLng(13.134237, -61.201582)));
+
+
+        //Mandarin Oriental
+        hotels.add(new Hotel("Mandarin Oriental","1-784-457-4795",
+                "Canouan", "",
+                new int[]{R.drawable.paradise_inn},
+                new int[]{110, 120, 73, 88, 90, 105, 93, 108 },
+                new String[]{"Ocean Front Apartments (Single)", "Ocean Front Apartments (Double)", "Garden View (Single)", "Garden View (Double)",
+                        "Superior Garden View (Single)", "Superior Garden View (Double)", "Garden View Apartments (Single)", "Garden View Apartments (Double)"},
+                new String[]{""},
+                new LatLng(12.713741, -61.321217)));
+
+
+
+        //Frangipani Hotel
+        hotels.add(new Hotel("Frangipani Hotel","1-784-457-4795",
+                "Bequia", "",
+                new int[]{R.drawable.paradise_inn},
+                new int[]{110, 120, 73, 88, 90, 105, 93, 108 },
+                new String[]{"Ocean Front Apartments (Single)", "Ocean Front Apartments (Double)", "Garden View (Single)", "Garden View (Double)",
+                        "Superior Garden View (Single)", "Superior Garden View (Double)", "Garden View Apartments (Single)", "Garden View Apartments (Double)"},
+                new String[]{""},
+                new LatLng(13.008243, -61.236920)));
+
+
+
+        //Bequia Plantation Hotel
+        hotels.add(new Hotel("Bequia Plantation Hotel","1-784-457-4795",
+                "Bequia", "",
+                new int[]{R.drawable.paradise_inn},
+                new int[]{110, 120, 73, 88, 90, 105, 93, 108 },
+                new String[]{"Ocean Front Apartments (Single)", "Ocean Front Apartments (Double)", "Garden View (Single)", "Garden View (Double)",
+                        "Superior Garden View (Single)", "Superior Garden View (Double)", "Garden View Apartments (Single)", "Garden View Apartments (Double)"},
+                new String[]{""},
+                new LatLng(13.005664, -61.238012)));
+
+
+
+        //Bequia Beach Hotel, Caribbean  Luxury Resort and Spa.
+        hotels.add(new Hotel("Bequia Beach Hotel, Caribbean  Luxury Resort and Spa.","1-784-457-4795",
+                "Canouan", "",
+                new int[]{R.drawable.paradise_inn},
+                new int[]{110, 120, 73, 88, 90, 105, 93, 108 },
+                new String[]{"Ocean Front Apartments (Single)", "Ocean Front Apartments (Double)", "Garden View (Single)", "Garden View (Double)",
+                        "Superior Garden View (Single)", "Superior Garden View (Double)", "Garden View Apartments (Single)", "Garden View Apartments (Double)"},
+                new String[]{""},
+                new LatLng(12.991761, -61.239484)));
+
+
+
+        //Mandarin Oriental
+        hotels.add(new Hotel("Tropical Hideaway","1-784-457-4795",
+                "Canouan", "",
+                new int[]{R.drawable.paradise_inn},
+                new int[]{110, 120, 73, 88, 90, 105, 93, 108 },
+                new String[]{"Ocean Front Apartments (Single)", "Ocean Front Apartments (Double)", "Garden View (Single)", "Garden View (Double)",
+                        "Superior Garden View (Single)", "Superior Garden View (Double)", "Garden View Apartments (Single)", "Garden View Apartments (Double)"},
+                new String[]{""},
+                new LatLng(13.000338, -61.236721)));
+
         return hotels;
     }
 

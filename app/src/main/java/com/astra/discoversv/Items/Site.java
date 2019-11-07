@@ -198,6 +198,40 @@ public class Site {
                 ,new LatLng(13.248189, -61.260628)));
 
 
+        //Rawacou
+        array.add(new Site("Rawacou Recreational Park"
+                ,"Argyle"
+                , "Hike La Soufriere!"
+                , EntertainmentTypes.RELAXATION
+                ,new int[]{R.drawable.walliabou_1}
+                ,new LatLng(13.151297,  -61.147938)));
+
+
+        //Black Point Tunnel
+        array.add(new Site("Black Point Tunnel and Recreational Park"
+                ,"Byera"
+                , "Hike La Soufriere!"
+                , EntertainmentTypes.RELAXATION
+                ,new int[]{R.drawable.walliabou_1}
+                ,new LatLng(13.263079, -61.117117)));
+
+        //Kingstown Cruise Ship and Ferry Terminal
+        array.add(new Site("Kingstown Cruise Ship and Ferry Terminal"
+                ,"Kingstown"
+                , "Hike La Soufriere!"
+                , 0
+                ,new int[]{R.drawable.walliabou_1}
+                ,new LatLng(13.148930, -61.223260)));
+
+        //Argyle International Airport
+        array.add(new Site("Argyle International Airport"
+                ,"Argyle"
+                , "Hike La Soufriere!"
+                , 0
+                ,new int[]{R.drawable.walliabou_1}
+                ,new LatLng(13.164113, -61.151375)));
+
+
         //------------ Grenadines ----------------//
 
 
