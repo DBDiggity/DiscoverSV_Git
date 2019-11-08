@@ -30,5 +30,6 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="detail_image_height">225dp</dimen>
     <dimen name="main_text_header">22sp</dimen>
+    <dimen name="main_text_subtext">15sp</dimen>
 
 </resources>

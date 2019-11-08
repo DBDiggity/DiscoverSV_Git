@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_title"
+        android:text="Info Title"
+        android:textSize="@dimen/main_text_header"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_location"
+        android:text="Location"
+        android:textSize="@dimen/main_text_subtext"/>
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_rating"
+        android:max="5"
+        style="?android:attr/ratingBarStyleSmall"
+        android:isIndicator="false"/>
+
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/info_images"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="@dimen/home_text_header"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info_description"
+        android:text="@string/lorem"
+        android:ellipsize="marquee"
+        android:maxLines="5"
+        android:minLines="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/info_hotel_facilities"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room Options"
+            android:textSize="@dimen/home_text_header"/>
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:id="@+id/info_rooms" />
+    </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/home_margin_intersect"
+            android:id="@+id/info_menu"
+            android:background="@drawable/ripple_inverted"
+            android:text="Menu"
+            android:textColor="@color/colorAccent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_margin_normal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_startsFrom"
+            android:text="Starts From"
+            android:textSize="@dimen/main_text_subtext"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_price"
+            android:text="$150.00"
+            android:textStyle="bold"
+            android:textSize="@dimen/home_text_header"
+            android:layout_below="@id/info_startsFrom"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_action"
+            android:id="@+id/info_actionBtn"
+            android:text="Action"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="true"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

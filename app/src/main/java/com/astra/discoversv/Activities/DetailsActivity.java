@@ -23,6 +23,9 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +37,8 @@ import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
 import com.yarolegovich.discretescrollview.transform.Pivot;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +49,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     @BindView(R.id.details_Rv) DiscreteScrollView details_Rv;
     @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.fab) FloatingActionButton fab;
 
     @BindView(R.id.details_description) TextView descriptionText;
     @BindView(R.id.details_description_title) TextView descriptionTitle;
@@ -54,6 +60,7 @@ public class DetailsActivity extends AppCompatActivity {
     List<PictureCard> picCards = new ArrayList<>();
     InfiniteScrollAdapter wrapper;
     DialogPlus dialog;
+    DialogPlus infoDialog;
 
     private String detailType;
     private List<Hotel> hotels;
@@ -77,15 +84,6 @@ public class DetailsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, detailType, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         initDetailsInfo();
         initRecycler();
@@ -165,16 +163,20 @@ public class DetailsActivity extends AppCompatActivity {
                 switch (v.getId()){
                     case R.id.details_btn_menu:
                         buildDialog();
+                        break;
+                    case R.id.fab:
+                        buildInfoDialog();
+                        break;
 
                 }
             }
         };
 
         menuBtn.setOnClickListener(listener);
+        fab.setOnClickListener(listener);
     }
 
     private void buildDialog(){
-
 
         dialog = DialogPlus.newDialog(this)
                 .setContentHolder(new ViewHolder(R.layout.layout_menu))
@@ -199,6 +201,84 @@ public class DetailsActivity extends AppCompatActivity {
                 .setPivotY(Pivot.Y.BOTTOM) // CENTER is a default one
                 .build());
     }
+
+    private void buildInfoDialog(){
+
+        infoDialog = DialogPlus.newDialog(this)
+                .setContentHolder(new ViewHolder(R.layout.dialog_info))
+//                .setMargin(0, 10, 0, 0)
+                .setPadding(20,20,20,20)
+                .setExpanded(true, 1250)
+                .setGravity(Gravity.CENTER)
+                .setContentBackgroundResource(R.color.overlay_black)
+                .setInAnimation(R.anim.abc_fade_in)
+                .setOutAnimation(R.anim.abc_fade_out)
+                .create();
+
+        initInfoDialog(infoDialog);
+
+        infoDialog.show();
+
+
+    }
+
+
+    private void initInfoDialog(DialogPlus infoDialog){
+        TextView infoTitle = (TextView) infoDialog.getHolderView().findViewById(R.id.info_title);
+        TextView infoLocation = (TextView) infoDialog.getHolderView().findViewById(R.id.info_location);
+        RatingBar infoRating = (RatingBar) infoDialog.getHolderView().findViewById(R.id.info_rating);
+        DiscreteScrollView infoPicture = (DiscreteScrollView) infoDialog.getHolderView().findViewById(R.id.info_images);
+        TextView infoDescription = (TextView) infoDialog.getHolderView().findViewById(R.id.info_description);
+        LinearLayout infoRooms = (LinearLayout) infoDialog.getHolderView().findViewById(R.id.info_hotel_facilities);
+        Button infoMenu = (Button) infoDialog.getHolderView().findViewById(R.id.info_menu);
+        TextView infoStartsFrom = (TextView) infoDialog.getHolderView().findViewById(R.id.info_startsFrom);
+        TextView infoPrice = (TextView) infoDialog.getHolderView().findViewById(R.id.info_price);
+        Button infoAction = (Button) infoDialog.getHolderView().findViewById(R.id.info_actionBtn);
+
+        switch (detailType){
+            case "hotels":
+                Hotel hotel = hotels.get(menuPosition);
+                infoTitle.setText(hotel.getName());
+                infoLocation.setText(hotel.getLocation());
+                infoRating.setNumStars(4);
+                infoDescription.setText(hotel.getDescription());
+                infoRooms.setVisibility(View.VISIBLE);
+                infoMenu.setVisibility(View.INVISIBLE);
+                infoStartsFrom.setText("Starts From");
+                if (hotel.getAccomdationRates().length > 0)
+                    infoPrice.setText("$" + hotel.getAccomdationRates()[0]);
+
+                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) infoAction.getLayoutParams();
+                params.removeRule(RelativeLayout.CENTER_VERTICAL);
+                params.addRule(RelativeLayout.ALIGN_PARENT_END);
+                infoAction.setLayoutParams(params);
+
+
+                infoAction.setText("Book");
+                break;
+            case "restaurants":
+                Restaurant restaurant = restaurants.get(menuPosition);
+                infoTitle.setText(restaurant.getName());
+                infoLocation.setText(restaurant.getLocation());
+                infoRating.setNumStars(4);
+                infoDescription.setText(restaurant.getDescription());
+                infoRooms.setVisibility(View.INVISIBLE);
+                infoMenu.setVisibility(View.VISIBLE);
+                infoStartsFrom.setText("");
+                infoPrice.setText("");
+                infoAction.setText("Call Now");
+
+                RelativeLayout.LayoutParams xparams = (RelativeLayout.LayoutParams) infoAction.getLayoutParams();
+                xparams.removeRule(RelativeLayout.ALIGN_PARENT_END);
+                xparams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+                infoAction.setLayoutParams(xparams);
+
+
+                break;
+        }
+
+    }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
