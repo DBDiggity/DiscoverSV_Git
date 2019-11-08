@@ -63,7 +63,8 @@
             android:id="@+id/details_btn_menu"
             android:background="@drawable/ripple_inverted"
             android:text="Menu"
-            android:textColor="@color/colorAccent"/>
+            android:textColor="@color/colorAccent"
+            android:visibility="invisible"/>
 
         <Button
             android:layout_width="wrap_content"

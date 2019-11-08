@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.astra.discoversv.Items.Hotel;
 import com.astra.discoversv.Items.PictureCard;
 import com.astra.discoversv.Items.Restaurant;
+import com.astra.discoversv.Items.Site;
 import com.astra.discoversv.R;
 import com.bumptech.glide.Glide;
 
@@ -25,7 +26,7 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.MyViewHo
 
     private List<Hotel> hotels;
     private List<Restaurant> restaurants;
-//    private  List<Sites> sites;
+    private  List<Site> sites;
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
@@ -49,6 +50,8 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.MyViewHo
             hotels = new Hotel().initHotels();
         else if (detailType.equals("restaurants"))
             restaurants = new Restaurant().initRestaurants();
+        else if (detailType.equals("sites"))
+            sites = new Site().initSites();
     }
 
 
@@ -62,15 +65,32 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull DetailsAdapter.MyViewHolder holder, int position) {
 
+        String title = "";
+        int image = 0;
+
         if (detailType.equals("hotels")) {
             Hotel hotel = hotels.get(position);
-            holder.title.setText(hotel.getName());
-            Glide.with(context).load(hotel.getHotelImages()[0]).into(holder.background);
+            title = hotel.getName();
+            image = hotel.getHotelImages()[0];
+            if (image == 0)
+                image = R.drawable.no_hotel;
+
         } else if (detailType.equals("restaurants")) {
             Restaurant restaurant = restaurants.get(position);
-            holder.title.setText(restaurant.getName());
-            Glide.with(context).load(restaurant.getPictures()[0]).into(holder.background);
+            title = restaurant.getName();
+            image = restaurant.getPictures()[0];
+            if (image == 0)
+                image = R.drawable.no_restaurant;
+        } else if (detailType.equals("sites")){
+            Site site = sites.get(position);
+            title = site.getName();
+            image = site.getSitePics()[0];
+            if (image == 0)
+                image = R.drawable.no_site;
         }
+
+        holder.title.setText(title);
+        Glide.with(context).load(image).into(holder.background);
     }
 
     @Override
@@ -80,7 +100,8 @@ public class DetailsAdapter extends RecyclerView.Adapter<DetailsAdapter.MyViewHo
             return hotels.size();
         } else if (detailType.equals("restaurants")) {
             return restaurants.size();
-        } else
+        } else if (detailType.equals("sites"))
+            return sites.size();
         return 0;
     }
 }

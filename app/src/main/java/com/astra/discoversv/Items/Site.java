@@ -78,7 +78,7 @@ public class Site {
         List<Site> array = new ArrayList<>();
 
         //La Soufriere
-        array.add(new Site("La Soufrire trail"
+        array.add(new Site("La Soufriere Trail"
                 ,"Georgetown"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.HIKING
@@ -87,10 +87,10 @@ public class Site {
 
         //Dark View Falls
         array.add(new Site("Dark View Falls"
-                ,"Georgetown"
+                ,"Richmond"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.FALLS
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng(13.2998129, -61.2274547)));
 
         //Falls of Belaine
@@ -98,7 +98,7 @@ public class Site {
                 ,"Georgetown"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.FALLS
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng(13.3668168, -61.1915017)));
 
         //Montreal Garden
@@ -119,18 +119,18 @@ public class Site {
 
         //Villa Beach
         array.add(new Site("Villa Beach"
-                ,"Georgetown"
+                ,"Villa"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.BEACH
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng(13.1338087, -61.2016502)));
 
         //Indian Bay
         array.add(new Site("Indian Bay"
-                ,"Georgetown"
+                ,"Villa"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.BEACH
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng(13.1368115, -61.2068966)));
 
         //Canash Beach
@@ -138,20 +138,20 @@ public class Site {
                 ,"Georgetown"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.BEACH
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng( 13.1262992, -61.1897006)));
 
         //Buccament Bay Beach
         array.add(new Site("Buccament Bay Beach"
-                ,"Georgetown"
+                ,"Buccament"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.BEACH
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng(13.1905342, -61.2671695)));
 
         //Mt. Wynne
         array.add(new Site("Mt. Wynne"
-                ,"Georgetown"
+                ,"Mt. Wynne"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.BEACH
                 ,new int[]{R.drawable.mt_wynne_1}
@@ -159,23 +159,23 @@ public class Site {
 
         //Botanical Gardens
         array.add(new Site("Botanical Gardens"
-                ,"Georgetown"
+                ,"Kingstown"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.RELAXATION
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng(13.164796, -61.227385)));
 
         //Fort Charlotte
         array.add(new Site("Fort Charlotte"
-                ,"Georgetown"
+                ,"Edin Boro"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.HISTORICAL
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng(13.157906, -61.242106)));
 
         //Fort Duvernette
         array.add(new Site("Fort Duvernette"
-                ,"Georgetown"
+                ,"Villa"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.BEACH
                 ,new int[]{R.drawable.fort_duvernette_1}
@@ -183,15 +183,15 @@ public class Site {
 
         //Belmont Lookout
         array.add(new Site("Belmont Lookout"
-                ,"Georgetown"
+                ,"Belmont"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.RELAXATION
-                ,new int[]{}
+                ,new int[]{0}
                 ,new LatLng(13.165033, -61.179502)));
 
         //Walliabou Heritage Park
         array.add(new Site("Walliabou Heritage Park"
-                ,"Georgetown"
+                ,"Walliabou"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.RELAXATION
                 ,new int[]{R.drawable.walliabou_1}
@@ -203,7 +203,7 @@ public class Site {
                 ,"Argyle"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.RELAXATION
-                ,new int[]{R.drawable.walliabou_1}
+                ,new int[]{0}
                 ,new LatLng(13.151297,  -61.147938)));
 
 
@@ -212,7 +212,7 @@ public class Site {
                 ,"Byera"
                 , "Hike La Soufriere!"
                 , EntertainmentTypes.RELAXATION
-                ,new int[]{R.drawable.walliabou_1}
+                ,new int[]{0}
                 ,new LatLng(13.263079, -61.117117)));
 
         //Kingstown Cruise Ship and Ferry Terminal
@@ -220,7 +220,7 @@ public class Site {
                 ,"Kingstown"
                 , "Hike La Soufriere!"
                 , 0
-                ,new int[]{R.drawable.walliabou_1}
+                ,new int[]{0}
                 ,new LatLng(13.148930, -61.223260)));
 
         //Argyle International Airport
@@ -228,7 +228,7 @@ public class Site {
                 ,"Argyle"
                 , "Hike La Soufriere!"
                 , 0
-                ,new int[]{R.drawable.walliabou_1}
+                ,new int[]{0}
                 ,new LatLng(13.164113, -61.151375)));
 
 

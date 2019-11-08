@@ -148,7 +148,7 @@ public class MainFragment extends Fragment {
                         detailsType = "restaurants";
                         break;
                     case R.id.destinations_all:
-                        popUpMenu();
+                        detailsType = "sites";
                         break;
                 }
 
@@ -234,10 +234,10 @@ public class MainFragment extends Fragment {
         };
 
         int[] destinationPics = new int[]{
-                R.drawable.people_beach,
-                R.drawable.night_beach,
-                R.drawable.woman_boat,
-                R.drawable.cloud_beach
+                R.drawable.la_soufriere_1,
+                R.drawable.no_site,
+                R.drawable.no_site,
+                R.drawable.montreal_gardens
         };
 
         int[] expPics = new int[]{
@@ -277,10 +277,10 @@ public class MainFragment extends Fragment {
         names.add("Queenstown");
 
         List<String> destinationNames = new ArrayList<>();
-        destinationNames.add("Villa Beach");
-        destinationNames.add("Nighttime in the Grenadines");
-        destinationNames.add("River 14");
-        destinationNames.add("Young island");
+        destinationNames.add("La Soufriere Trail");
+        destinationNames.add("Dark View Falls");
+        destinationNames.add("Falls of Belaine");
+        destinationNames.add("Montreal Gardens");
 
         List<String> expNames = new ArrayList<>();
         expNames.add("Peleau");

@@ -119,8 +119,8 @@ public class Restaurant {
                             "day into night, our restaurant is the ideal setting to savor the distinctive flavors of the Caribbean. Reservations are required\",\n"
                     ,
                     new int[]{R.drawable.yi_1, R.drawable.yi_2, R.drawable.yi_3},
-//                    new int[]{R.drawable.yi_breakfast, R.drawable.yi_lunch, R.drawable.yi_dinner},
-                    new int[]{},
+                    new int[]{R.drawable.yi_breakfast, R.drawable.yi_lunch, R.drawable.yi_dinner},
+//                    new int[]{},
                     new LatLng(13.131297, -61.202049)
             ));
 

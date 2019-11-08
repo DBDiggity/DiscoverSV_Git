@@ -28,8 +28,8 @@ public class PicturesAdapter extends RecyclerView.Adapter<PicturesAdapter.MyView
 
         public MyViewHolder(View v){
             super(v);
-            title = (TextView) v.findViewById(R.id.title);
-            background = (ImageView) v.findViewById(R.id.background);
+            title = (TextView) v.findViewById(R.id.card_details_title);
+            background = (ImageView) v.findViewById(R.id.card_details_background);
 
         }
 

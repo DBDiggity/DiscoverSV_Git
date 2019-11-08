@@ -9,6 +9,7 @@ import com.astra.discoversv.Adapters.MenuAdapter;
 import com.astra.discoversv.Items.Hotel;
 import com.astra.discoversv.Items.PictureCard;
 import com.astra.discoversv.Items.Restaurant;
+import com.astra.discoversv.Items.Site;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -65,7 +66,7 @@ public class DetailsActivity extends AppCompatActivity {
     private String detailType;
     private List<Hotel> hotels;
     private List<Restaurant> restaurants;
-//    private List<Sites> sites;
+    private List<Site> sites;
     private int menuPosition = 0;
 
     @Override
@@ -105,6 +106,10 @@ public class DetailsActivity extends AppCompatActivity {
                 restaurants = new Restaurant().initRestaurants();
                 getSupportActionBar().setTitle("Restaurants");
                 break;
+            case "sites":
+                sites = new Site().initSites();
+                getSupportActionBar().setTitle("Sites");
+                break;
         }
 
     }
@@ -136,13 +141,14 @@ public class DetailsActivity extends AppCompatActivity {
                         descriptionText.setText(restaurant.getDescription());
                         descriptionTitle.setText(restaurant.getName());
                         checkMenu(restaurant.getMenu());
-                        menuPosition = wrapper.getRealCurrentPosition();
-
+                        break;
                     case "sites":
+                        Site site = sites.get(wrapper.getRealCurrentPosition());
+                        descriptionText.setText(site.getDescription());
+                        descriptionTitle.setText(site.getName());
                         break;
                 }
-
-
+                menuPosition = wrapper.getRealCurrentPosition();
             }
         });
 
@@ -235,48 +241,72 @@ public class DetailsActivity extends AppCompatActivity {
         TextView infoPrice = (TextView) infoDialog.getHolderView().findViewById(R.id.info_price);
         Button infoAction = (Button) infoDialog.getHolderView().findViewById(R.id.info_actionBtn);
 
+        String title = "Title";
+        String location = "Location";
+        int rating = 4;
+        String description = getResources().getString(R.string.lorem);
+        String startsFrom = "Starts From";
+        String price = "$0";
+        String action = "Action";
+
         switch (detailType){
             case "hotels":
                 Hotel hotel = hotels.get(menuPosition);
-                infoTitle.setText(hotel.getName());
-                infoLocation.setText(hotel.getLocation());
-                infoRating.setNumStars(4);
-                infoDescription.setText(hotel.getDescription());
+
+                title = hotel.getName();
+                location = hotel.getLocation();
+                description = hotel.getDescription();
+                startsFrom = "Starts From";
+                action = "Book Room";
+                if (hotel.getAccomdationRates().length > 0)
+                  price = "$" + hotel.getAccomdationRates()[0];
+
                 infoRooms.setVisibility(View.VISIBLE);
                 infoMenu.setVisibility(View.INVISIBLE);
-                infoStartsFrom.setText("Starts From");
-                if (hotel.getAccomdationRates().length > 0)
-                    infoPrice.setText("$" + hotel.getAccomdationRates()[0]);
-
                 RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) infoAction.getLayoutParams();
                 params.removeRule(RelativeLayout.CENTER_VERTICAL);
                 params.addRule(RelativeLayout.ALIGN_PARENT_END);
                 infoAction.setLayoutParams(params);
 
-
-                infoAction.setText("Book");
                 break;
             case "restaurants":
                 Restaurant restaurant = restaurants.get(menuPosition);
-                infoTitle.setText(restaurant.getName());
-                infoLocation.setText(restaurant.getLocation());
-                infoRating.setNumStars(4);
-                infoDescription.setText(restaurant.getDescription());
+
+                title = restaurant.getName();
+                location = restaurant.getLocation();
+                description = restaurant.getDescription();
+                startsFrom = "";
+                price = "";
+                action = "Call Now";
+
                 infoRooms.setVisibility(View.INVISIBLE);
                 infoMenu.setVisibility(View.VISIBLE);
-                infoStartsFrom.setText("");
-                infoPrice.setText("");
-                infoAction.setText("Call Now");
-
                 RelativeLayout.LayoutParams xparams = (RelativeLayout.LayoutParams) infoAction.getLayoutParams();
                 xparams.removeRule(RelativeLayout.ALIGN_PARENT_END);
                 xparams.addRule(RelativeLayout.CENTER_HORIZONTAL);
                 infoAction.setLayoutParams(xparams);
+                break;
 
+            case "sites":
+                Site site = sites.get(menuPosition);
 
+                title = site.getName();
+                location = site.getLocation();
+                description = site.getDescription();
+                startsFrom = "";
+                action = "Book Tour";
+                price = "";
                 break;
         }
-
+        infoTitle.setText(title);
+        infoLocation.setText(location);
+        infoRating.setNumStars(rating);
+        infoDescription.setText(description);
+        infoRooms.setVisibility(View.INVISIBLE);
+        infoMenu.setVisibility(View.INVISIBLE);
+        infoStartsFrom.setText(startsFrom);
+        infoPrice.setText(price);
+        infoAction.setText(action);
     }
 
     @Override
