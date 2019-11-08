@@ -34,7 +34,7 @@
 
     <com.yarolegovich.discretescrollview.DiscreteScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="175dp"
         android:id="@+id/info_images"
         />
 

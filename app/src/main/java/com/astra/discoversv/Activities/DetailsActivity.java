@@ -236,6 +236,7 @@ public class DetailsActivity extends AppCompatActivity {
         DiscreteScrollView infoPicture = (DiscreteScrollView) infoDialog.getHolderView().findViewById(R.id.info_images);
         TextView infoDescription = (TextView) infoDialog.getHolderView().findViewById(R.id.info_description);
         LinearLayout infoRooms = (LinearLayout) infoDialog.getHolderView().findViewById(R.id.info_hotel_facilities);
+        DiscreteScrollView infoRoomIcons = (DiscreteScrollView) infoDialog.getHolderView().findViewById(R.id.info_rooms);
         Button infoMenu = (Button) infoDialog.getHolderView().findViewById(R.id.info_menu);
         TextView infoStartsFrom = (TextView) infoDialog.getHolderView().findViewById(R.id.info_startsFrom);
         TextView infoPrice = (TextView) infoDialog.getHolderView().findViewById(R.id.info_price);
@@ -245,6 +246,7 @@ public class DetailsActivity extends AppCompatActivity {
         String location = "Location";
         int rating = 4;
         String description = getResources().getString(R.string.lorem);
+        int[] images = new int[]{0};
         String startsFrom = "Starts From";
         String price = "$0";
         String action = "Action";
@@ -260,6 +262,8 @@ public class DetailsActivity extends AppCompatActivity {
                 action = "Book Room";
                 if (hotel.getAccomdationRates().length > 0)
                   price = "$" + hotel.getAccomdationRates()[0];
+
+                images = hotel.getHotelImages();
 
                 infoRooms.setVisibility(View.VISIBLE);
                 infoMenu.setVisibility(View.INVISIBLE);
@@ -278,6 +282,7 @@ public class DetailsActivity extends AppCompatActivity {
                 startsFrom = "";
                 price = "";
                 action = "Call Now";
+                images = restaurant.getPictures();
 
                 infoRooms.setVisibility(View.INVISIBLE);
                 infoMenu.setVisibility(View.VISIBLE);
@@ -296,8 +301,10 @@ public class DetailsActivity extends AppCompatActivity {
                 startsFrom = "";
                 action = "Book Tour";
                 price = "";
+                images = site.getSitePics();
                 break;
         }
+
         infoTitle.setText(title);
         infoLocation.setText(location);
         infoRating.setNumStars(rating);
@@ -307,6 +314,17 @@ public class DetailsActivity extends AppCompatActivity {
         infoStartsFrom.setText(startsFrom);
         infoPrice.setText(price);
         infoAction.setText(action);
+
+
+        RecyclerView.Adapter adapter = new MenuAdapter(images, this);
+        infoPicture.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+        infoPicture.setItemTransformer(new ScaleTransformer.Builder()
+                .setMaxScale(0.8f)
+                .setMinScale(0.65f)
+                .setPivotX(Pivot.X.CENTER) // CENTER is a default one
+                .setPivotY(Pivot.Y.BOTTOM) // CENTER is a default one
+                .build());
     }
 
     @Override
