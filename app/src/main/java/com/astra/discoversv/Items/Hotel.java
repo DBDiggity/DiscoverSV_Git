@@ -173,7 +173,7 @@ public class Hotel {
                 new String[]{""},
                 new LatLng(13.134237, -61.201582)));
 
-
+//TODO: Add in additional hotel info (phone/pics/etc)
         //Spring Garden Resort
         hotels.add(new Hotel("Spring Garden Resort","1-784-457-4795",
                 "Spring", "",

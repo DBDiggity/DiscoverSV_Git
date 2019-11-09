@@ -10,9 +10,21 @@
         <item name="fab_restaurants" type="id"/>
         <item name="fab_hotels" type="id"/>
         <item name="fab_sites" type="id"/>
+
         <item name="fab_replace_1" type="id"/>
         <item name="fab_replace_2" type="id"/>
         <item name="fab_replace_3" type="id"/>
         <item name="fab_replace_4" type="id"/>
         <item name="fab_replace_5" type="id"/>
+        <item name="fab_replace_6" type="id"/>
+        <item name="fab_replace_7" type="id"/>
+        <item name="fab_replace_8" type="id"/>
+        <item name="fab_replace_9" type="id"/>
+
+
+        <item name="fab_hotel_on" type="id"/>
+        <item name="fab_hotel_off" type="id"/>
+        <item name="fab_restaurant_on" type="id"/>
+        <item name="fab_restaurant_off" type="id"/>
+
 </resources>
