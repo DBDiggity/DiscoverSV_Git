@@ -148,7 +148,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/main_recycler_height"
                 android:id="@+id/recycler_destination"
                 android:clipToPadding="false"
                 android:layout_marginTop="@dimen/home_margin_intersect"
@@ -190,7 +190,7 @@
                 android:layout_marginStart="@dimen/home_margin_intersect"
                 android:layout_marginEnd="@dimen/home_margin_intersect"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/main_recycler_height"
                 android:id="@+id/recycler_experience"
                 android:clipToPadding="false"
                 android:scrollbars="horizontal" />
@@ -229,7 +229,7 @@
                 android:layout_marginStart="@dimen/home_margin_intersect"
                 android:layout_marginEnd="@dimen/home_margin_intersect"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/main_recycler_height"
                 android:id="@+id/recycler_thingsToDo"
                 android:clipToPadding="false"
                 android:scrollbars="horizontal" />
@@ -390,7 +390,7 @@
                 android:layout_marginStart="@dimen/home_margin_intersect"
                 android:layout_marginEnd="@dimen/home_margin_intersect"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/main_recycler_height"
                 android:id="@+id/recycler_hotels"
                 android:clipToPadding="false"
                 android:scrollbars="horizontal" />
@@ -458,7 +458,7 @@
                 android:layout_marginStart="@dimen/home_margin_intersect"
                 android:layout_marginEnd="@dimen/home_margin_intersect"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/main_recycler_height"
                 android:id="@+id/recycler_restaurants"
                 android:clipToPadding="false"
                 android:scrollbars="horizontal" />

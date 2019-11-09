@@ -141,8 +141,8 @@ public class MapFragment extends Fragment {
 
 
                 switch (Objects.requireNonNull(actionItem.getLabel(context))){
-                    case "Toggle Restaurants":
 
+                    case "Toggle Restaurants":
                         toggleMarkers(restaurantList, restaurantToggle, 0, actionItem, restaurantAction);
                         restaurantToggle = !restaurantToggle;
                         break;
@@ -215,11 +215,9 @@ public class MapFragment extends Fragment {
                 mapFab.replaceActionItem(new SpeedDialActionItem.Builder(fabIds[siteCounter], R.drawable.hide_icon)
                         .setFabBackgroundColor(context.getColor(R.color.faded_gray)).setLabel(actionItem.getLabel(context)).create(), position);
                 break;
-
             case 9:
                 mapFab.replaceActionItem(replacement, position);
                 break;
-
         }
 
             checkSite(markerList, siteCounter);
@@ -230,13 +228,11 @@ public class MapFragment extends Fragment {
         List<Marker> filtered = new ArrayList<>();
 
         for (Marker marker : markers){
-
             marker.setVisible(false);
             int tag = (int) marker.getTag();
             if (tag == siteType)
                 filtered.add(marker);
         }
-
         for (Marker marker : filtered){
             marker.setVisible(true);
         }
@@ -245,7 +241,6 @@ public class MapFragment extends Fragment {
         siteCounter++;
         if (siteCounter > 9) {
             for (Marker marker : markers){
-
                 marker.setVisible(true);
                 }
             siteCounter = 1;
@@ -354,15 +349,6 @@ public class MapFragment extends Fragment {
 
       }
 
-    }
-
-    private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
-        Drawable vectorDrawable = ContextCompat.getDrawable(context, vectorResId);
-        vectorDrawable.setBounds(0, 0, vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight());
-        Bitmap bitmap = Bitmap.createBitmap(vectorDrawable.getIntrinsicWidth(), vectorDrawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(bitmap);
-        vectorDrawable.draw(canvas);
-        return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
 
 }
