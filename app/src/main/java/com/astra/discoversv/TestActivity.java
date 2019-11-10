@@ -11,6 +11,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.astra.discoversv.Adapters.ViewPagerAdapter;
 
+import com.astra.discoversv.Fragments.ContactFragment;
 import com.astra.discoversv.Fragments.DemoFragment;
 import com.astra.discoversv.Fragments.MainFragment;
 import com.astra.discoversv.Fragments.MapFragment;
@@ -68,7 +69,7 @@ public class TestActivity extends AppCompatActivity {
         mViewPagerAdapter.addFragment(MainFragment.newInstance(), "Main");
         //ToDo: Use map to show location of restaurants, site seeing and hotels
         mViewPagerAdapter.addFragment(MapFragment.newInstance(), "Map");
-        mViewPagerAdapter.addFragment(DemoFragment.newInstance(), "Tours & Taxis");
+        mViewPagerAdapter.addFragment(ContactFragment.newInstance(), "Tours & Taxis");
         mViewPager.setAdapter(mViewPagerAdapter);
 
         tabLayout.setupWithViewPager(mViewPager);
@@ -79,7 +80,6 @@ public class TestActivity extends AppCompatActivity {
         final CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
         collapsingToolbar.setTitle(" ");
         appBarLayout.setExpanded(true);
-
 
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             boolean isShow = false;
@@ -92,7 +92,6 @@ public class TestActivity extends AppCompatActivity {
                 }
                 if (scrollRange + verticalOffset == 0) {
                     collapsingToolbar.setTitle("");
-//                    collapsingToolbar.setTitle(" ");
                     isShow = true;
                 } else if (isShow) {
                     collapsingToolbar.setTitle(" ");

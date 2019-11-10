@@ -272,9 +272,9 @@ public class MainFragment extends Fragment {
         };
 
         List<String> names = new ArrayList<>();
-        names.add("Pier 86");
-        names.add("Grant's Beach");
-        names.add("Queenstown");
+        names.add("Ocean view");
+        names.add("See the\nbeaches");
+        names.add("Explore\nKingstown");
 
         List<String> destinationNames = new ArrayList<>();
         destinationNames.add("La Soufriere Trail");

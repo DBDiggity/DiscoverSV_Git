@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:text="ST. VINCENT AND THE GRENADINES TOURIST INFORMATION"
+                android:minLines="2"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="@dimen/home_margin_intersect"/>
+
+
+            <com.alespero.expandablecardview.ExpandableCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_margin_intersect"
+                android:id="@+id/contact_taxi"
+                app:inner_view="@layout/layout_contact_1"
+                app:title="Taxi"
+                app:icon="@drawable/taxi_marker"
+                app:expandOnClick="true"
+                app:animationDuration="300"
+                app:startExpanded="false" />
+
+            <com.alespero.expandablecardview.ExpandableCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_margin_intersect"
+                android:id="@+id/contact_tour"
+                app:inner_view="@layout/layout_contact_2"
+                app:title="Tour"
+                app:icon="@drawable/taxi_marker"
+                app:expandOnClick="true"
+                app:animationDuration="300"
+                app:startExpanded="false" />
+
+            <com.alespero.expandablecardview.ExpandableCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/home_margin_intersect"
+                android:id="@+id/contact_general"
+                app:inner_view="@layout/layout_contact"
+                app:title="General"
+                app:icon="@drawable/taxi_marker"
+                app:expandOnClick="true"
+                app:animationDuration="300"
+                app:startExpanded="false" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
