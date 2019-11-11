@@ -286,7 +286,7 @@ public class MainFragment extends Fragment {
         destinationNames.add("Montreal Gardens");
 
         List<String> expNames = new ArrayList<>();
-        expNames.add("Peleau");
+        expNames.add("Food");
         expNames.add("Historical Gardens");
         expNames.add("Cultural Festivals");
         expNames.add("Boat Rides");

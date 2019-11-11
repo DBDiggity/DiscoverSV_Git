@@ -316,7 +316,7 @@ public class Restaurant {
 //                    "Mustique",
 //                    "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
 //                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-//                    R.drawable.signature_3},
+//                    R.drawable.signature_3az},
 //                    new int[]{},
 //                    new LatLng(12.882777, -61.188440)
 //            ));

@@ -82,7 +82,7 @@ public class Site {
                 ,"Georgetown"
                 , "The La Soufriere Cross Country Trail winds its way from sea level up to the top of the majestic La Soufriere Volcano (4048ft/ 1178m). "
                 , EntertainmentTypes.HIKING
-                ,new int[]{R.drawable.la_soufriere_1}
+                ,new int[]{R.drawable.volcano}
                 ,new LatLng(13.3165194, -61.1526489)));
 
         //Dark View Falls
@@ -90,7 +90,7 @@ public class Site {
                 ,"Richmond"
                 , "Dark View Falls are two spectacular waterfalls, one above the other, cascading down high cliff faces and plunging into natural pools. !"
                 , EntertainmentTypes.FALLS
-                ,new int[]{0}
+                ,new int[]{R.drawable.darkview}
                 ,new LatLng(13.2998129, -61.2274547)));
 
         //Falls of Belaine
@@ -98,7 +98,7 @@ public class Site {
                 ,"Georgetown"
                 , "The Falls of Baleine is among St. Vincent's finest natural wonders. The sparkling waters plunge about 60ft into a rock-enclosed fresh water pool, perfect for swimming. "
                 , EntertainmentTypes.FALLS
-                ,new int[]{0}
+                ,new int[]{R.drawable.baleine   }
                 ,new LatLng(13.3668168, -61.1915017)));
 
         //Montreal Garden
@@ -138,7 +138,7 @@ public class Site {
                 ,"Georgetown"
                 , "Enter Description"
                 , EntertainmentTypes.BEACH
-                ,new int[]{0}
+                ,new int[]{R.drawable.canash}
                 ,new LatLng( 13.1262992, -61.1897006)));
 
         //Buccament Bay Beach
@@ -318,6 +318,55 @@ public class Site {
                 , EntertainmentTypes.EXPLORATION
                 ,new int[]{R.drawable.palm_0}
                 ,new LatLng(12.586495, -61.396696)));
+
+        //Hell's Gate Falls
+        array.add(new Site("Hell's Gate Falls"
+                ,"Georgetown"
+                , ""
+                , EntertainmentTypes.FALLS
+                ,new int[]{R.drawable.hellsfall}
+                ,new LatLng(13.287706, -61.143845)));
+
+        //Fort Hamilton
+        array.add(new Site("Fort Hamilton"
+                ,"Bequia"
+                , ""
+                , EntertainmentTypes.EXPLORATION
+                ,new int[]{R.drawable.lkssoa}
+                ,new LatLng(13.011130, -61.246136)));
+
+        //Trinity Falls
+        array.add(new Site("Trinity Falls"
+                ,"Richmond"
+                , ""
+                , EntertainmentTypes.FALLS
+                ,new int[]{R.drawable.trinity}
+                ,new LatLng(13.294059, -61.214376)));
+
+        //Turtle Watching Sanctuary
+        array.add(new Site("Turtle Watching Sanctuary"
+                ,"Bequia"
+                , ""
+                , EntertainmentTypes.FUN
+                ,new int[]{R.drawable.turtle}
+                ,new LatLng(12.6336820,  -61.3557126)));
+
+        //Tamarind Beach
+        array.add(new Site("Tamarind Beach"
+                ,"Canouan"
+                , ""
+                , EntertainmentTypes.BEACH
+                ,new int[]{R.drawable.tamarind}
+                ,new LatLng(12.7054391,  -61.3270747)));
+
+        //Big Sands Beach
+        array.add(new Site("Big Sands Beach"
+                ,"Union Island"
+                , ""
+                , EntertainmentTypes.BEACH
+                ,new int[]{R.drawable.bigsand}
+                ,new LatLng(12.6336820,  -61.3557126)));
+
 
         return array;
     }
