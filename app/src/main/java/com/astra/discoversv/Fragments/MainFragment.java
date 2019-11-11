@@ -2,6 +2,7 @@ package com.astra.discoversv.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -9,8 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -65,7 +69,8 @@ public class MainFragment extends Fragment {
     @BindView(R.id.hotel_all) Button hotelAll;
     @BindView(R.id.restaurant_all) Button restaurantAll;
 
-    @BindView(R.id.exo_player) PlayerView playerView;
+    @BindView(R.id.exo_player) VideoView mVideoView;
+//    @BindView(R.id.exo_player) PlayerView playerView;
 
     //    Variables
     private QuickHorizontalAdapter adapter;
@@ -76,8 +81,10 @@ public class MainFragment extends Fragment {
     public Context context;
     private String detailsType = "null";
 
+    MediaController videoMediaController;
     SimpleExoPlayer player;
     RequestOptions options;
+    View iView;
 
     public MainFragment() {
     }
@@ -100,9 +107,9 @@ public class MainFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View itemView = inflater.inflate(R.layout.fragment_main, container, false);
-
         ButterKnife.bind(this, itemView);
 
+        iView = itemView;
         context = itemView.getContext();
         initRecyclerView();
         initPlayer();
@@ -163,24 +170,20 @@ public class MainFragment extends Fragment {
         restaurantAll.setOnClickListener(listener);
     }
 
-    private void popUpMenu(){
-        Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show();
+    private void initPlayer(){
+        String mUrl = "android.resource://" + context.getPackageName() + "/" + R.raw.discover_svg;
+
+
+        videoMediaController = new MediaController(context);
+        mVideoView.setVideoPath(mUrl);
+        videoMediaController.setMediaPlayer(mVideoView);
+        mVideoView.setMediaController(videoMediaController);
+        mVideoView.requestFocus();
+//        mVideoView.start();
+
     }
 
-    private void initPlayer(){
-        player = ExoPlayerFactory.newSimpleInstance(context);
-        DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(context, Util.getUserAgent(context, "Discover SVG"));
-//        Uri url = Uri.parse("http://www.tourism.gov.vc/tourism/images/mp3/abc.mp4");
-        Uri url = Uri.parse("http://www.tourism.gov.vc/tourism/images/mp3/abc.mp4");
-        MediaSource videoSource = new ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(url);
-        ClippingMediaSource clippingSource =
-                new ClippingMediaSource(
-                        videoSource,  /* startPositionUs= */ 12_000_000,
-                        /* endPositionUs= */ 68_000_000);
-        player.prepare(clippingSource);
-        player.setRepeatMode(Player.REPEAT_MODE_ONE);
-        playerView.setPlayer(player);
-    }
+
 
     private void initHoriztonalRecycler(RecyclerView rView, @Nullable List<PictureCard> pCards, @Nullable PicturesAdapter phAdapter,
                                         @Nullable List<QuickHorizontalCard> qhCards, @Nullable QuickHorizontalAdapter qhAdapter){

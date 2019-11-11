@@ -122,7 +122,7 @@ public class Site {
                 ,"Villa"
                 , "Enter Description"
                 , EntertainmentTypes.BEACH
-                ,new int[]{0}
+                ,new int[]{R.drawable.villa_0}
                 ,new LatLng(13.1338087, -61.2016502)));
 
         //Indian Bay
@@ -130,7 +130,7 @@ public class Site {
                 ,"Villa"
                 , "Enter Description"
                 , EntertainmentTypes.BEACH
-                ,new int[]{0}
+                ,new int[]{R.drawable.indian_0}
                 ,new LatLng(13.1368115, -61.2068966)));
 
         //Canash Beach
@@ -146,7 +146,7 @@ public class Site {
                 ,"Buccament"
                 , "Enter Description"
                 , EntertainmentTypes.BEACH
-                ,new int[]{0}
+                ,new int[]{R.drawable.buccament_0}
                 ,new LatLng(13.1905342, -61.2671695)));
 
         //Mt. Wynne
@@ -154,7 +154,7 @@ public class Site {
                 ,"Mt. Wynne"
                 , "Mount Wynne Beach is a beautiful Black Sand beach located on the south-western coastline, approximately 11 miles from capital Kingstown."
                 , EntertainmentTypes.BEACH
-                ,new int[]{R.drawable.mt_wynne_1}
+                ,new int[]{R.drawable.mt_wynne_0}
                 ,new LatLng(13.216340, -61.275238)));
 
         //Botanical Gardens
@@ -170,7 +170,7 @@ public class Site {
                 ,"Edin Boro"
                 , "The fort was built in the 1760's with an interesting history of why the cannons are pointed inland. Worth a visit not just for its awesome views and also for its rich history."
                 , EntertainmentTypes.HISTORICAL
-                ,new int[]{0}
+                ,new int[]{R.drawable.fort_charlotte_0}
                 ,new LatLng(13.157906, -61.242106)));
 
         //Fort Duvernette
@@ -203,7 +203,7 @@ public class Site {
                 ,"Argyle"
                 , "Rawacou Recreation Park features two beaches separated by a rocky headland with a man-made pool. "
                 , EntertainmentTypes.RELAXATION
-                ,new int[]{0}
+                ,new int[]{R.drawable.rawacou_0}
                 ,new LatLng(13.151297,  -61.147938)));
 
 
@@ -240,7 +240,7 @@ public class Site {
                 ,"Grenadines"
                 , "One of Bequia's most popular beaches."
                 , EntertainmentTypes.BEACH
-                ,new int[]{R.drawable.princess_margaret_1}
+                ,new int[]{R.drawable.princess_margaret_0}
                 ,new LatLng(13.000923, -61.241247)));
 
 
@@ -249,12 +249,12 @@ public class Site {
                 ,"Grenadines"
                 , "This excellent beach is one of the highlights of Bequia."
                 , EntertainmentTypes.BEACH
-                ,new int[]{R.drawable.lower_bay_1}
+                ,new int[]{R.drawable.lower_bay}
                 ,new LatLng(12.996511, -61.246048)));
 
 
         //Canouan Golf Course
-        array.add(new Site("Canouan Gold Course"
+        array.add(new Site("Canouan Golf Course"
                 ,"Grenadines"
                 , "Have a game of golf"
                 , EntertainmentTypes.FUN
@@ -266,7 +266,7 @@ public class Site {
                 ,"Grenadines"
                 , "A Mustique beach that is popular with tourists seeking good swimming and snorkeling."
                 , EntertainmentTypes.BEACH
-                ,new int[]{R.drawable.macaroni_beach_1}
+                ,new int[]{R.drawable.macaroni_0}
                 ,new LatLng(12.880317, -61.176350)));
 
 
@@ -275,7 +275,7 @@ public class Site {
                 ,"Grenadines"
                 , "Chill underneath the Engagement Umbrella"
                 , EntertainmentTypes.FUN
-                ,new int[]{R.drawable.mopion_1}
+                ,new int[]{R.drawable.mopion_0}
                 ,new LatLng(12.546244, -61.395341)));
 
 
@@ -284,7 +284,7 @@ public class Site {
                 ,"Grenadines"
                 , "This pristine tropical bay and its beach are protected from rough Atlantic waters by a small piece of land that extends out into the ocean. "
                 , EntertainmentTypes.BEACH
-                ,new int[]{R.drawable.salt_whistle_1}
+                ,new int[]{R.drawable.salt_whistle_0}
                 ,new LatLng(12.646623, -61.389990)));
 
         //Petite St. Vincent
@@ -292,7 +292,7 @@ public class Site {
                 ,"Grenadines"
                 , "This small island is a popular resort destination, similar to its nearby counterpart, Palm Island."
                 , EntertainmentTypes.EXPLORATION
-                ,new int[]{R.drawable.petit_svg}
+                ,new int[]{R.drawable.petit_svg_1, R.drawable.petit_svg_0, R.drawable.petit_svg}
                 ,new LatLng(12.536795, -61.383724)));
 
         //Petit Tabac
@@ -308,7 +308,7 @@ public class Site {
                 ,"Grenadines"
                 , "A collection of several uninhabited islands in the southern section of the Grenadines that offer some of the best beaches for swimming, tanning and snorkeling in the Caribbean."
                 , EntertainmentTypes.EXPLORATION
-                ,new int[]{R.drawable.petit_tabac_1}
+                ,new int[]{R.drawable.tobago_cays}
                 ,new LatLng(12.633512, -61.356816)));
 
         //Palm Island
@@ -316,7 +316,7 @@ public class Site {
                 ,"Grenadines"
                 , "This small island has recently become a popular resort destination with great beaches."
                 , EntertainmentTypes.EXPLORATION
-                ,new int[]{R.drawable.palm_island_1}
+                ,new int[]{R.drawable.palm_0}
                 ,new LatLng(12.586495, -61.396696)));
 
         return array;

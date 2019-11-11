@@ -65,16 +65,16 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="300dp"
+                android:layout_height="320dp"
                 android:layout_marginTop="@dimen/home_margin_normal"
                 android:id="@+id/video_container">
 
-                <com.google.android.exoplayer2.ui.PlayerView
+                <VideoView
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:id="@+id/exo_player"
                     android:layout_marginTop="@dimen/home_margin_intersect"
-                    android:layout_marginBottom="@dimen/home_margin_intersect"
+                    android:layout_marginBottom="50dp"
                     android:layout_marginStart="@dimen/home_margin_intersect"
                     android:layout_marginEnd="@dimen/home_margin_intersect"/>
 
