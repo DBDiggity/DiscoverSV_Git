@@ -178,8 +178,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Villa",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(13.132045, -61.199620)
             ));
@@ -190,8 +189,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Bequia",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(13.002870, -61.240198)
             ));
@@ -202,8 +200,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Bequia",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(13.149429, -61.202250)
             ));
@@ -214,8 +211,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Bequia",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(13.006549, -61.238068)
             ));
@@ -226,8 +222,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Bequia",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(13.012260, -61.238840)
             ));
@@ -238,8 +233,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Mustique",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(12.880694, -61.188236)
             ));
@@ -250,8 +244,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Mustique",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(12.882777, -61.188440)
             ));
@@ -263,8 +256,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Mustique",
                     "Driftwood Restaurant offers Mediterranean cuisine with a Caribbean flair, a stunning seaward view of Blue Lagoon",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(12.889526, -61.185256)
             ));
@@ -276,8 +268,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Mustique",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(12.878415, -61.185733)
             ));
@@ -289,8 +280,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Palm Island",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(12.587878, -61.400701)
             ));
@@ -302,8 +292,7 @@ public class Restaurant {
                     "1-784-456-6518",
                     "Arnos Vale",
                     "Enter Description Here",
-                    new int[]{R.drawable.signature_1, R.drawable.signature_4, R.drawable.signature_5, R.drawable.signature_2,
-                    R.drawable.signature_3},
+                    new int[]{0},
                     new int[]{},
                     new LatLng(13.145012, -61.205945)
             ));

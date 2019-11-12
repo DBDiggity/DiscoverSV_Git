@@ -101,6 +101,23 @@ public class Site {
                 ,new int[]{R.drawable.baleine   }
                 ,new LatLng(13.3668168, -61.1915017)));
 
+        //Trinity Falls
+        array.add(new Site("Trinity Falls"
+                ,"Richmond"
+                , "Enter Description Here"
+                , EntertainmentTypes.FALLS
+                ,new int[]{R.drawable.trinity}
+                ,new LatLng(13.294059, -61.214376)));
+
+
+        //Hell's Gate Falls
+        array.add(new Site("Hell's Gate Falls"
+                ,"Georgetown"
+                , "Enter Description Here"
+                , EntertainmentTypes.FALLS
+                ,new int[]{R.drawable.hellsfall}
+                ,new LatLng(13.287706, -61.143845)));
+
         //Montreal Garden
         array.add(new Site("Montreal Gardens"
                 ,"Georgetown"
@@ -319,13 +336,6 @@ public class Site {
                 ,new int[]{R.drawable.palm_0}
                 ,new LatLng(12.586495, -61.396696)));
 
-        //Hell's Gate Falls
-        array.add(new Site("Hell's Gate Falls"
-                ,"Georgetown"
-                , "Enter Description Here"
-                , EntertainmentTypes.FALLS
-                ,new int[]{R.drawable.hellsfall}
-                ,new LatLng(13.287706, -61.143845)));
 
         //Fort Hamilton
         array.add(new Site("Fort Hamilton"
@@ -335,13 +345,7 @@ public class Site {
                 ,new int[]{R.drawable.lkssoa}
                 ,new LatLng(13.011130, -61.246136)));
 
-        //Trinity Falls
-        array.add(new Site("Trinity Falls"
-                ,"Richmond"
-                , "Enter Description Here"
-                , EntertainmentTypes.FALLS
-                ,new int[]{R.drawable.trinity}
-                ,new LatLng(13.294059, -61.214376)));
+
 
         //Turtle Watching Sanctuary
         array.add(new Site("Turtle Watching Sanctuary"

@@ -9,8 +9,8 @@
     <item>
 
         <bitmap
-            android:src="@drawable/discover_logo_450"
-            android:gravity="center"/>
+            android:src="@drawable/discover_logo"
+            android:gravity="fill_horizontal|fill_vertical"/>
 
     </item>
 
