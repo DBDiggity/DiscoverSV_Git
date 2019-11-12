@@ -242,6 +242,15 @@ public class Hotel {
                 new String[]{""},
                 new LatLng(12.991761, -61.239484)));
 
+        //Tamarind Beach Hotel
+        hotels.add(new Hotel("Tamarind Beach Hotel","1-784-458-8044",
+                "Canouan", "A truly special and captivating setting for relaxing or romantic Caribbean escapes, Tamarind Beach Hotel is a characterful, boutique style gem situated on the stunning white sand coastline of Grand Bay, Canouan Island.",
+                new int[]{R.drawable.tamarind1, R.drawable.tamarind2, R.drawable.tamarind3},
+                new int[]{110, 120, 73, 88, 90, 105, 93, 108 },
+                new String[]{"Ocean Front Apartments (Single)", "Ocean Front Apartments (Double)", "Garden View (Single)", "Garden View (Double)",
+                        "Superior Garden View (Single)", "Superior Garden View (Double)", "Garden View Apartments (Single)", "Garden View Apartments (Double)"},
+                new String[]{""},
+                new LatLng(12.704131, -61.329081)));
 
         return hotels;
     }

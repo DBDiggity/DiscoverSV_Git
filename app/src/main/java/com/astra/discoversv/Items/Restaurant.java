@@ -195,15 +195,15 @@ public class Restaurant {
             ));
 
             //The Fig Tree
-            restaurants.add(new Restaurant(
-                    "The Fig Tree",
-                    "1-784-456-6518",
-                    "Bequia",
-                    "Enter Description Here",
-                    new int[]{0},
-                    new int[]{},
-                    new LatLng(13.149429, -61.202250)
-            ));
+//            restaurants.add(new Restaurant(
+//                    "The Fig Tree",
+//                    "1-784-456-6518",
+//                    "Bequia",
+//                    "Enter Description Here",
+//                    new int[]{0},
+//                    new int[]{},
+//                    new LatLng(13.149429, -61.202250)
+//            ));
 
             //The Fig Tree
             restaurants.add(new Restaurant(

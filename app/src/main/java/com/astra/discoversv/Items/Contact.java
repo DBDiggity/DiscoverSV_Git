@@ -165,6 +165,20 @@ public class Contact {
                 "Villa Beach",
                 "tour",
                 "17844574477"));
+        contacts.add(new Contact("Sailor's Wilderness Tours",
+                "Kingstown",
+                "tour",
+                "7844571712"));
+
+        contacts.add(new Contact("Serenity Dive",
+                "Ratho Mill",
+                "tour",
+                "7844575335"));
+
+        contacts.add(new Contact("Dive Bequia",
+                "Port Elizabeth",
+                "tour",
+                "7844583504"));
 
         List<Contact> filtered = new ArrayList<>();
 
