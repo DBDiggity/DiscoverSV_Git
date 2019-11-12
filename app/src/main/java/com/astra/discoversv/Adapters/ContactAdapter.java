@@ -59,6 +59,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactV
         Contact contact = contacts.get(position);
             holder.name.setText(contact.getName());
             holder.address.setText("Location: " + contact.getAddress());
+           if(contact.getDescription()!=null)
             holder.seating.setText("# of Seats: " + contact.getDescription());
             holder.phone.setOnClickListener(new View.OnClickListener() {
                 @Override
