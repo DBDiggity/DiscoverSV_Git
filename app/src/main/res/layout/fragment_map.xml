@@ -22,7 +22,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/map_fab"
-    android:layout_gravity="bottom|end"
+    android:layout_gravity="bottom|start"
     app:sdMainFabClosedSrc="@drawable/you_are_here_1"
     app:sdOverlayLayout="@id/overlay"
     />
